@@ -1,0 +1,23 @@
+% !TeX program = xelatex
+
+\documentclass[10pt,a4paper]{article}
+
+\def\cvLanguageSetup{%
+  \setdefaultlanguage{russian}%
+  \setotherlanguage{english}%
+}
+
+\def\cvMetadata{%
+  \hypersetup{
+    pdftitle={Baranov Konstantin -- C++ Software Engineer},
+    pdfauthor={Baranov Konstantin},
+    pdfsubject={Resume / CV},
+    pdfkeywords={C++, C++20, Android NDK, Linux, CMake, Protobuf, Reverse Engineering, Android internals},
+    pdfcreator={XeLaTeX},
+    pdflang={ru-RU}
+  }%
+}
+
+\def\cvContentFile{cv_content_ru.tex}
+
+\input{cv_template.tex}

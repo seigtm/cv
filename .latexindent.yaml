@@ -1,0 +1,23 @@
+defaultIndent: '  '
+
+removeTrailingWhitespace:
+  beforeProcessing: 0
+  afterProcessing: 1
+
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+
+  textWrapOptions:
+    columns: 0
+    multipleSpacesToSingle: 1
+    removeBlockLineBreaks: 1
+    when: before
+    comments:
+      wrap: 0
+      inheritLeadingSpace: 0
+    huge: overflow
+    separator: ""
+
+  oneSentencePerLine:
+    manipulateSentences: 0

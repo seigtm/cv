@@ -1,0 +1,39 @@
+{
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "latexmk (xelatex)"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk (xelatex)",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "-auxdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.search.rootFiles.include": [
+        "cv_en.tex",
+        "cv_ru.tex"
+    ],
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "latex-workshop.formatting.latexindent.args": [
+        "-c",
+        "%DIR%/",
+        "%TMPFILE%",
+        "-m",
+        "-l=%DIR%/.latexindent.yaml"
+    ]
+}

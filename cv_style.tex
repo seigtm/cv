@@ -1,0 +1,78 @@
+\usepackage[a4paper,top=0.95cm,bottom=0.95cm,left=1.12cm,right=1.12cm]{geometry}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\defaultfontfeatures{Ligatures=TeX}
+
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono}[
+  Scale=0.84,
+  ItalicFont={Noto Sans Mono},
+  BoldItalicFont={Noto Sans Mono Bold}
+]
+
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{xurl}
+\usepackage[hidelinks,unicode,pdfencoding=auto,psdextra]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\RaggedRight
+\setlength{\RaggedRightParindent}{0pt}
+\urlstyle{same}
+
+\definecolor{textgray}{HTML}{202124}
+\definecolor{mutedgray}{HTML}{5F6368}
+\definecolor{sectiongray}{HTML}{24292F}
+\definecolor{rulegray}{HTML}{B7B7B7}
+\definecolor{accentgray}{HTML}{30363D}
+\AtBeginDocument{\color{textgray}}
+
+\newcommand{\bodyfont}{\fontsize{9.55pt}{10.85pt}\selectfont}
+\newcommand{\namefont}{\fontsize{15.4pt}{16.2pt}\selectfont}
+\newcommand{\rolefont}{\fontsize{11.4pt}{12.0pt}\selectfont}
+\newcommand{\contactfont}{\fontsize{9.1pt}{10.2pt}\selectfont}
+\newcommand{\sep}{\ {\color{mutedgray}|}\ }
+
+\titleformat{\section}
+{\normalsize\bfseries\color{sectiongray}}
+{}{0pt}{\MakeUppercase}
+[\vspace{1.0pt}{\color{rulegray}\titlerule[0.35pt]}]
+\titlespacing*{\section}{0pt}{6.8pt}{3.4pt}
+
+\newcommand{\role}[4]{%
+  \Needspace{4\baselineskip}%
+  {\bfseries\color{accentgray}#1}\hfill{\bfseries\color{mutedgray}#2}\par
+  \vspace{-0.6pt}
+  {\itshape\color{textgray}#3}\hfill{\itshape\color{mutedgray}#4}\par
+  \vspace{0.8pt}
+}
+
+\newcommand{\project}[2]{%
+  \Needspace{3\baselineskip}%
+  {\bfseries\color{accentgray}#1}\hfill{\color{mutedgray}#2}\par
+  \vspace{0.8pt}
+}
+
+\newcommand{\skill}[2]{%
+  \noindent{\bfseries\color{accentgray}#1:} #2\par
+}
+\newcommand{\tightvspace}{\vspace{1.5pt}}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  topsep=0.7pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=1.0pt,
+  labelsep=0.45em
+}
+\renewcommand\labelitemi{{\color{mutedgray}\raisebox{0.15ex}{\tiny\textbullet}}}

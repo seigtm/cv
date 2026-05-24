@@ -1,0 +1,9 @@
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex*
+*.xdv
+__latexindent_temp*.tex
+build/
