@@ -41,3 +41,13 @@ Clean auxiliary files:
 ```sh
 latexmk -c
 ```
+
+## License
+
+This repository is licensed under the [0BSD License](LICENSE).
+
+You may use, copy, modify, and distribute the LaTeX template for personal or commercial purposes
+without attribution.
+
+The included CV content is real personal example data. If you use this repository as a template,
+replace all personal information and generated PDF files with your own.
