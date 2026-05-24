@@ -1,35 +1,43 @@
 # CV
 
-This repository contains English and Russian versions of the same CV.
+This repository contains English and Russian versions of the same CV, written in LaTeX and built
+with XeLaTeX.
+
+## PDF versions
+
+- [English CV](cv_en.pdf)
+- [Russian CV](cv_ru.pdf)
 
 ## Requirements
 
-The CV uses Noto Sans and Noto Sans Mono, licensed under the SIL Open Font License 1.1.
-The fonts are not bundled in this repository.
+The CV uses Noto Sans and Noto Sans Mono. The fonts are licensed under the SIL Open Font License
+1.1 and are not bundled in this repository.
+
+Required tools and fonts:
 
 - XeLaTeX
 - latexmk
-- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) font
-- [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono) font
+- [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans)
+- [Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono)
 
 ## Structure
 
 - `cv_en.tex` and `cv_ru.tex` are the public build entrypoints.
+- `cv_content_en.tex` and `cv_content_ru.tex` contain language-specific CV content.
 - `cv_style.tex` contains the shared preamble, fonts, colors, layout, and macros.
 - `cv_template.tex` contains the shared document wrapper.
-- `cv_content_en.tex` and `cv_content_ru.tex` contain language-specific CV content.
+- `cv_en.pdf` and `cv_ru.pdf` are generated PDF versions committed intentionally for direct access.
 
 ## Build
 
-Build one version directly:
+Build with `latexmk`:
 
 ```sh
-xelatex cv_en.tex
-xelatex cv_ru.tex
+latexmk -xelatex -interaction=nonstopmode -halt-on-error cv_en.tex cv_ru.tex
 ```
 
-Or build both versions with latexmk:
+Clean auxiliary files:
 
 ```sh
-latexmk -xelatex cv_en.tex cv_ru.tex
+latexmk -c
 ```
